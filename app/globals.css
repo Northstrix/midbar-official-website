@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+body {
+  font-family: var(--font-open-sans), sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #000;
+    --footer-background: #0a0a0a;
+    --hovered-footer-badge-background: #111;
+    --feature-icon-background: #18181b;
+    --foreground: #fafafa;
+    --middle-foreground: #aaa;
+    --sub-foreground: #aaa;
+    --subtle-foreground: #646464;
+    --accent: #2e7eff;
+    --accent-success: #44FF40;
+    --accent-error: #FF472E;
+    --language-selector-list-bg: #0e0e0e;
+    --language-selector-center-line-bg: #222;
+    --border-color: #242424;
+    --scrolbar-track-color: #262626;
+    --desktop-section-text-separator-color: #363636;
+    --hovered-footer-badge-border-color: #303030;
+    --inactive-floating-label-input-outline-color: #303030;
+    --floating-label-input-muted-foreground: #999;
+    --floating-label-active-outline-color: #999;
+    --border-radius: 6px;
+    --outer-border-radius: 6.34px;
+    --smooth-border-radius: 12px;
+    --outer-smooth-border-radius: 12.56px;
+    --playing-card-rounding: 18px;
+    --outer-playing-card-rounding: 18.2px;
+    --eased-gradient: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.85) 0%, 
+        rgba(0, 0, 0, 0.83) 40%, 
+        rgba(0, 0, 0, 0.8) 40.0%, 
+        rgba(0, 0, 0, 0.61) 45.5%, 
+        rgba(0, 0, 0, 0.52) 50.9%, 
+        rgba(0, 0, 0, 0.39) 56.4%, 
+        rgba(0, 0, 0, 0.28) 61.8%, 
+        rgba(0, 0, 0, 0.19) 67.3%, 
+        rgba(0, 0, 0, 0.12) 72.7%, 
+        rgba(0, 0, 0, 0.07) 78.2%, 
+        rgba(0, 0, 0, 0.03) 83.6%, 
+        rgba(0, 0, 0, 0.01) 89.1%, 
+        rgba(0, 0, 0, 0.002) 94.5%, 
+        rgba(0, 0, 0, 0.0) 100.0%
+      );
+      height: 30%;
+    --hero-enter: 92;
+    --hero-hold: 42;
+    --hero-exit: 36;
+    --hero-pause: 44;
+    --hero-stagger: 8;
+    --hero-spread: 16;
+    --hero-offset: 32;
+
+    --hero-min-intensity: 0.40;
+    --hero-max-intensity: 1.00;
+  }
+}
+
+p {
+  font-weight: 400;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrolbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  opacity: 0.8; /* emulate 0.8 opacity on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--scrolbar-track-color);
+}
